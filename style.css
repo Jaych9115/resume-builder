@@ -161,3 +161,14 @@ nav a:hover{
     position: relative;
     z-index: 1;
 }
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
