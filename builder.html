@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <h2>ResumeBuilder Pro</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="builder.html">Create Resume</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- LEFT FORM -->
+    <div class="form-section">
+
+        <h3>Create Your Resume</h3>
+
+        <input type="file" id="photo">
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+
+        <textarea id="skills" placeholder="Skills"></textarea>
+        <textarea id="education" placeholder="Education"></textarea>
+        <textarea id="experience" placeholder="Experience"></textarea>
+
+        <select id="template">
+            <option value="modern">Modern</option>
+            <option value="classic">Classic</option>
+        </select>
+
+        <button onclick="generateResume()">Generate Resume</button>
+        <button onclick="setTimeout(downloadPDF, 500)">Download PDF</button>
+
+    </div>
+
+    <!-- RIGHT PREVIEW -->
+    <div class="preview-section">
+
+        <div class="resume modern" id="resume">
+
+    <div class="header">
+        <img id="rphoto" >
+
+        <div class="info">
+        <h2 id="rname"></h2>
+        <p id="remail"></p>
+        <p id="rphone"></p>
+     </div>
+     </div>
+            <h3>Skills</h3>
+            <p id="rskills"></p>
+
+            <h3>Education</h3>
+            <p id="reducation"></p>
+
+            <h3>Experience</h3>
+            <p id="rexperience"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
