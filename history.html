@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        
+        <header class="navbar">
+            <h2>ResumeBuilder <span>Pro</span></h2>
+            <nav class="nav-right">
+                <a href="index.html">Home</a>
+                <a href="builder.html">Create Resume</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="about.html">About</a>
+                
+                <div class="profile-menu">
+                    <button id="profileBtn">👤 Profile</button>
+                    
+                    <div id="dropdown" class="dropdown">
+                        <p id="profileName"></p>
+                        <button onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </nav>
+            
+        </header>
+        <!-- HISTORY SECTION -->
+        <section class="history-container">
+            <h2>Your Resume History</h2>
+            <p>Total Resumes: <span id="resumeCount">0</span></p>
+            <div id="resumeList">
+                <div class="actions">
+                    <button title="Edit">Edit</button>
+                    <button title="Download" >Download</button>
+                    <button title="Delete">Delete</button>
+                </div>
+            </div>
+            <br><br>
+            
+            <button onclick="clearHistory()" class="clear-btn">
+                Clear History
+            </button>
+        </section>
+        
+        <footer>
+            <p>© 2026 ResumeBuilder Pro | Designed by Jay Choudhary</p>
+        </footer>
+        <div id="resume" class="resume modern" style="position:absolute; left:-9999px; top:0; width:800px;">
+            
+            <div class="header">
+                <img id="rphoto">
+                
+                <div class="info">
+                    <h2 id="rname"></h2>
+                    <p id="remail"></p>
+                    <p id="rphone"></p>
+                </div>
+            </div>
+            
+            <h3>Skills</h3>
+            <p id="rskills"></p>
+            
+            <h3>Education</h3>
+            <p id="reducation"></p>
+            
+            <h3>Experience</h3>
+            <p id="rexperience"></p>
+            
+        </div>
+        
+        
+        <script src="script.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    </body>
+    </html>
+    

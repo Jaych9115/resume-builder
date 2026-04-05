@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - ResumeBuilder Pro</title>
+    
+    <style>
+        /* LOGIN PAGE */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #3498db, #6dd5fa);
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-container button {
+    width: 100%;
+    background: #3498db;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    background-color: yellow;
+}
+    </style>
+</head>
+<body class="login-body">
+
+<div class="login-container">
+    <h2>Login to ResumeBuilder</h2>
+
+    <form onsubmit="login(event)">
+        <input type="text" id="username" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    
+    <a href="signup.html">Signup</a>
+
+    <p id="error" style="color:red;"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

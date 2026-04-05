@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="navbar">
+    <h2>ResumeBuilder <span>Pro</span></h2>
+    <nav class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="builder.html">Create Resume</a>
+        <a href="history.html">History</a>
+        <a href="about.html">About</a>
+
+        <div class="profile-menu">
+            <button id="profileBtn">👤 Profile</button>
+
+            <div id="dropdown" class="dropdown">
+                <p id="profileName"></p>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<section class="dashboard">
+    <h1>Welcome, <span id="welcomeUser"></span> 👋</h1>
+    <p>Total Resumes: <span id="resumeCount">0</span></p>
+
+    <div id="savedData" class="resume-grid"></div>
+    
+    <div id="emptyState" class="hidden">
+        <p>No resumes yet 😢</p>
+        <a href="builder.html" class="btn">Create First Resume</a>
+    </div>
+</section>
+<section class="hero">
+    <h1>Create Professional Resume in Minutes</h1>
+    <p>Modern UI • Easy to Use • Instant Download</p>
+    <a href="builder.html" class="btn">Start Building</a>
+</section>
+
+<section class="features">
+    <div class="feature-card">📄 Live Resume Preview</div>
+    <div class="feature-card">🎨 Multiple Templates</div>
+    <div class="feature-card">📸 Profile Photo Upload</div>
+    <div class="feature-card">⬇️ Download as PDF</div>
+</section>
+
+<footer>
+    <p>© 2026 ResumeBuilder Pro | Designed by Jay Choudhary</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
