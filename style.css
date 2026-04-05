@@ -1,25 +1,87 @@
+/* ===== GLOBAL BODY STYLING ===== */
 body {
     margin: 0;
-    font-family: 'Segoe UI';
-    background: #f0f2f5;
+    font-family: Arial;
+    background: #eef2f7;
+    padding: 20px;
 }
 
-/* NAVBAR */
-header {
-    background: #2c3e50;
-    color: white;
+/* ===== NAVBAR MAIN CONTAINER ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
     padding: 15px;
-    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* MAIN LAYOUT */
+/* ===== NAVBAR BRAND TEXT ===== */
+.navbar span {
+    color: #3498db;
+}
+
+/* ===== NAVIGATION LINKS ===== */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* ===== NAV LINK HOVER EFFECT ===== */
+nav a:hover {
+    border: 1px solid green;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 100px;
+    background: linear-gradient(to right,#3498db,#6dd5fa);
+    color: white;
+}
+
+/* ===== FEATURES SECTION LAYOUT ===== */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+/* ===== FEATURE CARD DESIGN ===== */
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ===== MAIN APP LAYOUT ===== */
+.app {
+    display: flex;
+}
+
+/* ===== SIDEBAR (FORM AREA) ===== */
+.sidebar {
+    width: 30%;
+    background: white;
+    padding: 20px;
+}
+
+/* ===== PREVIEW AREA ===== */
+.preview {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== MAIN FLEX LAYOUT (FORM + PREVIEW) ===== */
 .main {
     display: flex;
     padding: 20px;
     gap: 20px;
 }
 
-/* FORM */
+/* ===== FORM SECTION ===== */
 .form-section {
     width: 35%;
     background: white;
@@ -28,12 +90,12 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* PREVIEW */
+/* ===== PREVIEW SECTION ===== */
 .preview-section {
     width: 65%;
 }
 
-/* INPUTS */
+/* ===== FORM INPUT FIELDS ===== */
 input, textarea, select {
     width: 100%;
     margin: 10px 0;
@@ -42,75 +104,25 @@ input, textarea, select {
     border: 1px solid #ccc;
 }
 
-/* BUTTONS */
+/* ===== BUTTON (MERGED FINAL VERSION) ===== */
 button {
     width: 100%;
-    padding: 12px;
     margin-top: 10px;
-    border: none;
+    padding: 12px;
     background: #3498db;
     color: white;
+    border: none;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
 }
 
+/* ===== BUTTON HOVER EFFECT ===== */
 button:hover {
     background: #2980b9;
 }
 
-/* RESUME CARD */
-.resume {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-
-
-/* MODERN TEMPLATE */
-.modern {
-    border-left: 6px solid #3498db;
-}
-
-/* CLASSIC TEMPLATE */
-.classic {
-    border: 2px solid black;
-    font-family: "Times New Roman";
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .main {
-        flex-direction: column;
-    }
-
-    .form-section, .preview-section {
-        width: 100%;
-    }
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-nav a:hover{
-    border: 1px solid yellow;
-}
-
-.hero {
-    text-align: center;
-    padding: 100px;
-    background: linear-gradient(to right, #3498db, #6dd5fa);
-    color: white;
-}
-
+/* ===== SPECIAL BUTTON (.btn) ===== */
 .btn {
     padding: 15px 25px;
     background: white;
@@ -119,56 +131,255 @@ nav a:hover{
     border-radius: 5px;
 }
 
-.btn:hover{
+/* ===== SPECIAL BUTTON HOVER ===== */
+.btn:hover {
     background-color: yellow;
 }
-.about {
-    padding: 40px;
+
+/* ===== TEMPLATE SELECTOR CONTAINER ===== */
+.templates {
+    display: flex;
+    gap: 10px;
 }
-#rphoto {
-    border-radius: 50%;
-    object-fit: cover;
+
+/* ===== TEMPLATE CARD ===== */
+.template-card {
+    padding: 10px;
+    background: #eee;
+    cursor: pointer;
 }
+
+/* ===== RESUME CARD (MERGED FINAL VERSION) ===== */
+.resume {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* ===== HEADER (PHOTO + INFO) ===== */
 .header {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: nowrap; /* prevent breaking */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
 }
 
+/* ===== PROFILE IMAGE (MERGED FINAL VERSION) ===== */
 #rphoto {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    border: 3px solid white;
+    position: relative;
+    z-index: 1;
 }
 
+/* ===== INFO SECTION (TEXT NEXT TO IMAGE) ===== */
 .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#resume {
-    background: white;
-    padding: 20px;
-    overflow: hidden; /* important */
-}
-
-.header, .info, #rphoto {
     position: relative;
     z-index: 1;
 }
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
-}
 
-.feature-card {
+/* ===== RESUME CONTAINER ===== */
+#resume {
     background: white;
     padding: 20px;
+    overflow: hidden;
+    width: 800px;
+    min-height: 1120px;
+    margin: auto;
+}
+
+/* ===== MODERN TEMPLATE STYLE ===== */
+.modern {
+    border-left: 6px solid #3498db;
+}
+
+/* ===== CLASSIC TEMPLATE STYLE ===== */
+.classic {
+    border: 2px solid black;
+    font-family: "Times New Roman";
+}
+
+/* ===== PROFILE BUTTON ===== */
+#profileBtn {
+    padding: 8px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 6px;
+}
+
+/* ===== RIGHT NAV CONTAINER ===== */
+.right-nav {
+    position: relative;
+}
+
+/* ===== NAV RIGHT SECTION ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ===== PROFILE MENU WRAPPER ===== */
+.profile-menu {
+    position: relative;
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== DROPDOWN ACTIVE STATE ===== */
+.dropdown.show {
+    display: block;
+}
+
+/* ===== HIDDEN CLASS ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== RESUME GRID (DASHBOARD) ===== */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* ===== RESUME CARD ITEM ===== */
+.card {
+    background: white;
+    padding: 15px;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* ===== CARD HOVER EFFECT ===== */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== ACTION BUTTON GROUP ===== */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ===== ACTION BUTTON STYLE ===== */
+.actions button {
+    border: none;
+    background: #3498db;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ===== HEADER (TOP BAR) ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .form-section,
+    .preview-section {
+        width: 100%;
+    }
+}
+
+/* ===== PREMIUM TEMPLATE: MINIMAL ===== */
+.minimal {
+    background: #ffffff;
+    padding: 30px;
+}
+
+.minimal h2 {
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.minimal h3 {
+    border-bottom: 1px solid #ccc;
+}
+
+/* ===== PREMIUM TEMPLATE: DARK ===== */
+.dark {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+.dark h2,
+.dark h3,
+.dark p {
+    color: #ffffff;
+}
+
+.dark h2 {
+    color: #00adb5;
+}
+
+.dark h3 {
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.dark .header {
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+/* ===== PREMIUM TEMPLATE: CREATIVE ===== */
+.creative {
+    background: linear-gradient(135deg, #ff6a00, #ee0979) !important;
+    color: white !important;
+}
+
+.creative h2,
+.creative h3,
+.creative p {
+    color: white;
+}
+
+.creative h3 {
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-bottom: 5px;
+}
+
+.creative .header {
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding-bottom: 10px;
+}
+
+/* Fix gradient + colors in PDF */
+.dark, .creative {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
