@@ -11,7 +11,8 @@
     <h2>ResumeBuilder Pro</h2>
     <nav>
         <a href="index.html">Home</a>
-        <a href="builder.html">Create Resume</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="history.html">History</a>
         <a href="about.html">About</a>
     </nav>
 </header>
@@ -26,21 +27,24 @@
 
         <input type="file" id="photo">
 
-        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="fullname" placeholder="Full Name">
         <input type="email" id="email" placeholder="Email">
         <input type="text" id="phone" placeholder="Phone">
 
         <textarea id="skills" placeholder="Skills"></textarea>
         <textarea id="education" placeholder="Education"></textarea>
         <textarea id="experience" placeholder="Experience"></textarea>
-
         <select id="template">
             <option value="modern">Modern</option>
             <option value="classic">Classic</option>
+            <option value="minimal">Minimal</option>
+            <option value="dark">Dark</option>
+            <option value="creative">Creative</option>
         </select>
-
+        
+        
         <button onclick="generateResume()">Generate Resume</button>
-        <button onclick="setTimeout(downloadPDF, 500)">Download PDF</button>
+        <button onclick="downloadFromBuilder()">Download PDF</button>
 
     </div>
 
