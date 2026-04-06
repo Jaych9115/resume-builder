@@ -100,7 +100,7 @@ function generateResume() {
         let reader = new FileReader();
         reader.onload = function (e) {
             rphoto.src = e.target.result;
-            saveData(e.target.result); // ✅ send photo
+            saveData(e.target.result); 
         };
         reader.readAsDataURL(file);
     } else {
@@ -127,7 +127,7 @@ function saveData(photoData) {
     education: education.value,
     experience: experience.value,
     photo: photoData,
-    template: document.getElementById("template").value  // ✅ ADD THIS
+    template: document.getElementById("template").value  
     };
 
 
@@ -160,14 +160,6 @@ if (location.pathname.includes("dashboard")) {
     if (data.length === 0) {
         document.getElementById("emptyState").classList.remove("hidden");
     }
-
-    savedData.innerHTML = data.map((r, i) => `
-        <div class="card">
-            <h3>${r.name}</h3>
-            <p>${r.email}</p>
-            <button onclick="deleteResume(${i})">Delete</button>
-        </div>
-    `).join("");
 }
 
 
